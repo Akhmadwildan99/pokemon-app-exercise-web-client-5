@@ -2,7 +2,6 @@ import  { useEffect, useState } from "react";
 import axios from "axios";
 import type { Pokemon } from "../types";
 import PokemomList from "../components/PokemonList";
-import Themetoggle from "../components/ThemeToggle";
 import SortAndToggle from "../components/SortAndToggle";
 import HeaderNavbar from "../components/HeaderNavbar";
 
