@@ -1,0 +1,13 @@
+// src/styles/_variables.scss
+
+$color-bg-light: #f5f6fa;
+$color-bg-dark: #23272f;
+$color-card-light: #fff;
+$color-card-dark: #2c3140;
+$text-light: #222;
+$text-dark: #fff;
+
+@mixin card {
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,.08);
+}

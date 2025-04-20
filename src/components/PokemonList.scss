@@ -1,0 +1,12 @@
+.list-container {
+
+    &-grid-view{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &-list-view{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

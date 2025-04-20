@@ -1,0 +1,21 @@
+@import './variables';
+
+body {
+    margin: 0; padding: 0; font-family: 'Inter', sans-serif; 
+}
+
+.light {
+    background-color: $color-bg-light; color:$text-light;
+
+    .pokemon-card { background:$color-card-light;}
+}
+.dark {
+    background-color:$color-bg-dark;color:$text-dark;
+
+    .pokemon-card {background:$color-card-dark;}
+}
+
+/* Responsive */
+@media (max-width:400px){
+    .container{padding:.5rem;}
+}

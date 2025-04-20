@@ -1,0 +1,65 @@
+.sort-and-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  
+    .sort-container {
+      display: flex;
+      align-items: center;
+  
+      .sort-select {
+        background-color: #333;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        min-width: 15rem;
+        height: 3rem;
+        margin-left: 1rem;
+      }
+    }
+  
+    .view-toggle {
+      display: flex;
+      align-items: center;
+  
+      .view-button {
+        background-color: #0C1231;
+        border: none;
+        cursor: pointer;
+        
+        &-grid {
+          border-radius: 0 5px 5px 0;
+        }
+
+        &-list {
+            border-radius: 5px 0 0 5px;
+        }
+  
+        svg {
+          stroke: #fff;
+          width: 24px;
+          height: 24px;
+          transition: stroke 0.3s ease;
+  
+          &:hover,
+          &:focus {
+            stroke: #61dafb;
+            outline: none;
+          }
+        }
+  
+        &.active {
+          svg {
+            stroke: #3D4466;
+          }
+            
+            
+          background-color: #3D4466;
+        }
+      }
+    }
+  }
+  

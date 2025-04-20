@@ -1,0 +1,112 @@
+.pokemon-detail {
+  background-color: #23272f;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 16px;
+  text-align: start;
+
+  .header {
+    .id {
+        font-size: 1.2rem;
+        color: #64748b;
+        font-weight: 400;
+        text-align: start;
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .pokemon-image {
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5em;
+  }
+
+  .name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 23rem;
+    margin: 0 auto 1rem auto;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+      text-transform: capitalize;
+    }
+
+    .small-icon {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 4px;
+    }
+  }
+
+  .stats-card {
+    background-color: #121827;
+    padding: 1em;
+    border-radius: 12px;
+    text-align: left;
+    color: #cbd5e1;
+    max-width: 23rem;
+    max-height: 40rem;
+    margin: 0 auto;
+
+
+    label {
+      font-size: 1.4em;
+      font-weight: 400;
+      color: #64748b;
+    }
+
+    .health-bar {
+      background-color: #334155;
+      height: 10px;
+      border-radius: 6px;
+      margin-top: 0.25em;
+      margin-bottom: 1em;
+
+      div.health-fill {
+        height: 100%;
+        background-color: #22c55e;
+        border-radius: 6px;
+        width: 0%;
+        transition: width ease-in-out 0.3s;
+      }
+    }
+
+    p {
+      margin-top: -0.7em;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    hr {
+      border: none;
+      background-color: #334155;
+      height: 0.15em;
+      margin-top: 0.75em;
+      margin-bottom: 0.75em;
+    }
+
+    div.atk-def {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .stat-label {
+        font-size: 1.4rem;
+        color: #64748b;
+        font-weight: 400;
+        margin-bottom: 0.5rem !important;
+      }
+
+      p {
+        font-size: 1.4rem;
+        margin-left: 0.5em;
+      }
+    }
+  }
+}
