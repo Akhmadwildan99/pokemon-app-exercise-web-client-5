@@ -34,7 +34,24 @@ function Detail() {
         console.error(e);
       }
     }
-    getOne();
+    
+    if (!id) {
+      console.error("ID is not defined");
+      return;
+    }
+
+    const pokemons = localStorage.getItem("pokemons") != null ? JSON.parse(localStorage.getItem("pokemons") as string) : null;
+    if (pokemons) {
+      const foundPokemon = pokemons.find((p: { id: number }) => p.id === parseInt(id));
+      if (foundPokemon) {
+        setPkm(foundPokemon);
+      }
+    } else {
+      console.log("No pokemons found in localStorage");
+      getOne();
+    }
+
+    
   }, [id]);
 
   return (

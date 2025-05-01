@@ -8,7 +8,7 @@ import HeaderNavbar from "../components/HeaderNavbar";
 function Home() {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
   const [sortOption, setSortOption] = useState("name");
-  const [view, setView] = useState<"list" | "grid">("grid");
+  const [view, setView] = useState<"list" | "grid">("list");
 
   useEffect(() => {
     const controller = new AbortController();
@@ -97,8 +97,10 @@ function Home() {
     setPokemons(sortedPokemons);
   }, [sortOption]);
 
+  
+
   return (
-    <>
+    <div className="home" style={{ backgroundColor: "#23272f" }}>
       <HeaderNavbar isHome={true} />
       <SortAndToggle onSortChange={setSortOption} onViewChange={setView} />
       {!pokemons.length ? (
@@ -106,7 +108,7 @@ function Home() {
       ) : (
         <PokemomList pokemons={pokemons} viewType={view} />
       )}
-    </>
+    </div>
   );
 }
 
