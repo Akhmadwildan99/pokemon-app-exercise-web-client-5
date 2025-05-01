@@ -11,7 +11,7 @@ const PokemonCard = ({ pokemon }: Props) => (
 
     <div className="pokemon-card">
       <div className="card-header">
-        <span className="type-label">{pokemon.type}</span>
+        <span className="type-label">{pokemon.type[0]}</span>
         <span className="id-label">#{pokemon.id.toString().padStart(4, "0")}</span>
       </div>
       <div className="card-image">

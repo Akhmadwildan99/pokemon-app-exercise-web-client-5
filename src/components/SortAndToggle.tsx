@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect, FC, ChangeEvent } from "react";
 import "./SortAndToggle.scss";
 
 interface SortAndToggleProps {
@@ -6,14 +6,14 @@ interface SortAndToggleProps {
   onViewChange: (view: "list" | "grid") => void;
 }
 
-const SortAndToggle: React.FC<SortAndToggleProps> = ({
+const SortAndToggle: FC<SortAndToggleProps> = ({
   onSortChange,
   onViewChange,
 }) => {
   const [sortOption, setSortOption] = useState("name");
-  const [view, setView] = useState<"list" | "grid">("grid");
+  const [view, setView] = useState<"list" | "grid">("list");
 
-  const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleSortChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;
     setSortOption(value);
     onSortChange(value);
@@ -23,6 +23,9 @@ const SortAndToggle: React.FC<SortAndToggleProps> = ({
     setView(newView);
     onViewChange(newView);
   };
+
+  
+ 
 
   return (
     <div className="sort-and-toggle">
